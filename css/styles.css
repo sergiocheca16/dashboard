@@ -1,0 +1,62 @@
+/*CSS PARA LA PAGINA PRINCIPAL*/
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    background-color: aquamarine;
+}
+
+.footer nav {
+    display: flex;
+    gap: 50px;
+}
+
+/*CSS PARA LA PAGINA DE LA HORA*/
+.reloj {
+    font-size: 25px;
+    font-weight: bold;
+    background-color: rgba(221, 133, 133, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+/*CSS PARA LA PAGINA DEL TIEMPO*/
+
+/*CSS PARA LA PAGINA DE LAS CONTRASEÑAS*/
+#contraseñaBtn {
+    padding: 12px 25px;
+    font-size: 15px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.contraseña {
+    font-size: 25px;
+    padding: 15px;
+    background-color: rgba(221, 133, 133, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    display: inline-block;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}
+/*CSS PARA LA PAGINA DE LOS LINKS*/
