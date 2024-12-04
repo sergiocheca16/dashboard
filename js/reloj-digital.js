@@ -34,7 +34,7 @@ function mostrarFrases() {
     } else if (hora >= 15 && hora < 17) {
         frase = "Vamos a darle un poco más al código"
     } else if (hora >= 17 && hora < 21) {
-        frase = "Eres libre, sal con tus amigos, haz ejercicio, mira alguna serie"
+        frase = "¡Eres libre! sal con tus amigos, haz ejercicio, mira alguna serie"
     } else if (hora >= 21 && hora < 22) {
         frase = "¡Hora de la cena! ¿Que te vas a preparar?"
     } else {

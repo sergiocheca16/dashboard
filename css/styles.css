@@ -6,6 +6,15 @@ html, body {
     flex-direction: column;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 main {
     flex: 1;
 }
@@ -28,7 +37,7 @@ main {
 .reloj {
     font-size: 25px;
     font-weight: bold;
-    background-color: rgba(221, 133, 133, 0.6);
+    background-color: rgba(221, 133, 133, 0.300);
     padding: 20px;
     border-radius: 15px;
     display: inline-block;
@@ -36,6 +45,69 @@ main {
     text-align: center;
 }
 /*CSS PARA LA PAGINA DEL TIEMPO*/
+#meteoActual {
+    background-color: rgba(255, 255, 255, 0.300);
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    max-height: 300px;
+    text-align: center;
+}
+
+#meteoActual img {
+    max-width: 80px;
+    margin: 10px auto;
+}
+
+#meteoActual p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+#meteoHoras {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.300);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    padding: 10px;
+    gap: 10px;
+}
+
+.meteo-hora {
+    background-color: #ffffff;
+    border: 1px solid #dce7f3;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.meteo-hora:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.meteo-hora p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.meteo-hora img {
+    max-width: 50px;
+    margin: 5px auto;
+}
+
+strong {
+    color: #1a73e8;
+}
 
 /*CSS PARA LA PAGINA DE LAS CONTRASEÑAS*/
 #contraseñaBtn {
@@ -51,7 +123,7 @@ main {
 .contraseña {
     font-size: 25px;
     padding: 15px;
-    background-color: rgba(221, 133, 133, 0.6);
+    background-color: rgba(221, 133, 133, 0.300);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
     display: inline-block;
