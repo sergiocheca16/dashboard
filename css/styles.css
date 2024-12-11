@@ -2,8 +2,10 @@
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body {
@@ -17,6 +19,19 @@ body {
 
 main {
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    position: relative;
+    background-color: #007bff;
 }
 
 .footer {
@@ -25,7 +40,7 @@ main {
     align-items: center;
     padding: 5px;
     position: relative;
-    background-color: aquamarine;
+    background-color: #007bff;
 }
 
 .footer nav {
@@ -33,20 +48,68 @@ main {
     gap: 50px;
 }
 
+svg {
+    color: white;
+}
+
+section {
+    position: absolute;
+}
+
+.reloj-contenedor {
+    top: 145px;
+    left: 150px;
+}
+
+.meteo-contenedor {
+    bottom: 110px;
+    right: 150px;
+}
+
+.contraseña-contenedor {
+    bottom: 130px;
+    left: 150px;
+}
+
+.links-contenedor {
+    top: 100px;
+}
+
+.contraseña-contenedor h1 {
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+.links-contenedor h1 {
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
 /*CSS PARA LA PAGINA DE LA HORA*/
 .reloj {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    background-color: rgba(221, 133, 133, 0.300);
+    background-color: rgba(255, 255, 255, 0.550);
     padding: 20px;
     border-radius: 15px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
+
+#hora {
+    font-size: 50px;
+}
+
+#frases {
+    font-size: 17px;
+}
+
 /*CSS PARA LA PAGINA DEL TIEMPO*/
 #meteoActual {
-    background-color: rgba(255, 255, 255, 0.300);
+    background-color: rgba(255, 255, 255, 0.550);
     padding: 10px;
     margin: 10px auto;
     border-radius: 10px;
@@ -73,7 +136,7 @@ main {
     position: relative;
     max-width: 300px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.300);
+    background-color: rgba(255, 255, 255, 0.550);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow-x: auto;
@@ -91,7 +154,7 @@ main {
 }
 
 .meteo-hora:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -106,29 +169,155 @@ main {
 }
 
 strong {
-    color: #1a73e8;
+    color: #007bff;
 }
 
 /*CSS PARA LA PAGINA DE LAS CONTRASEÑAS*/
 #contraseñaBtn {
     padding: 12px 25px;
     font-size: 15px;
-    background-color: #ff6f61;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button#contraseñaBtn:hover {
+    background: #0056b3;
 }
 
 .contraseña {
     font-size: 25px;
     padding: 15px;
-    background-color: rgba(221, 133, 133, 0.300);
+    background-color: rgba(255, 255, 255, 0.550);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     font-weight: bold;
     padding: 20px;
     text-align: center;
 }
+
+.mainContraseña {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContraseña h1 {
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
 /*CSS PARA LA PAGINA DE LOS LINKS*/
+.links {
+    background-color: rgba(255, 255, 255, 0.550);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+}
+
+.linksContenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.mainLink {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainLink h1 {
+    color: white;
+    -webkit-text-stroke: 0.5px black;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button#linkBtn {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button#linkBtn:hover {
+    background: #0056b3;
+}
+
+ul#linksLista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+ul#linksLista li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+ul#linksLista li:hover {
+    background: #e9ecef;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#linksLista a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    flex: 1;
+    transition: color 0.3s ease;
+}
+
+ul#linksLista a:hover {
+    color: #0056b3;
+}
+
+/*ANIMACION BOTON "X"*/
+ul#linksLista button {
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+ul#linksLista button:hover {
+    background: #c82333;
+}
+
